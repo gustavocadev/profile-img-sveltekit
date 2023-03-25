@@ -22,7 +22,7 @@
 		reader.addEventListener('load', (e) => {
 			const result = e.target?.result as string;
 
-			console.log({ result });
+			// console.log({ result });
 
 			img = result;
 		});
@@ -41,7 +41,6 @@
 			// when the form is submitted, reset the isNewImg flag
 			isNewImg = false;
 		}}
-		enctype="multipart/form-data"
 		class="flex flex-col gap-4"
 	>
 		<FileDropzone name="files" on:change={onChangeHandler} />
