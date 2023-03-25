@@ -29,6 +29,8 @@ export const actions = {
 		const buffer = Buffer.from(arrayBuffer);
 		const extention = files.name.split('.').pop();
 
+		console.log({ files });
+
 		// generate a random id for the image
 		const imgId = crypto.randomUUID();
 		await fs.writeFile(`./static/${imgId}.${extention}`, buffer);
